@@ -57,11 +57,23 @@ Content Styling
     justify-content: center;
 }
 
+.imageWrapperEntrance {
+    max-width: 1rem;
+}
 
 .textContent {
     font-size: 24pt;
 }
 
+.textTitle6 {
+    font-size: 36pt;
+    font-weight: bold;
+}
+
+.textIntro {
+    font-size: 28pt;
+    font-weight: bold;
+}
 
 
 .tmpImage {
