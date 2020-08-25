@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 90px;
+    max-width: 100%;
+}
+
+/*
+Flexbox styling
+*/
+
+.container-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.item1 {
+    flex-grow: 1;
+}
+
+.item2 {
+    flex-grow: 2;
+}
+
+/*
+Header styling
+*/
+.header {
+    border-bottom: 3px black solid;
+}
+
+.logoHeaderSP > img{
+    height: 500px;
+    margin-left: 150px;
+}
+
+
+
+
+
+/*
+Content Styling
+*/
+.contentWrapper {
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.imageWrapper {
+    padding: 50px 10px 10px 10px;
+    justify-content: center;
+}
+
+
+.textContent {
+    font-size: 24pt;
+}
+
+
+
+.tmpImage {
+    width: 100%;
+    height: 400px;
+    background-color: grey;
+}
+
+/*
+Mobile Drawer nav styling
+*/
+
+.navLogo > img {
+    height: 500px;
+    margin-top: -150px
+}
+
+.navLink{
+    font-size: 75px;
+}
+
+nav{
+    height: 10vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: white;
+    z-index: 1;
+}
+
+.mobile-nav-open-icon{
+    font-size: 100px;
+    cursor: pointer;
+    margin-right: 2rem;
+    color: black;
+    margin-left:3rem;
+}
+
+.sidenav-container {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    background-color: white;
+    border-right: 1px solid black;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidenav-container a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    transition: 0.3s;
+    margin: 10px 0;
+}
+
+.sidenav-container a:hover {
+    text-decoration: black underline;
+}
+
+.sidenav-container .closebtn {
+    font-size: 250px;
+    color: black ;
+    padding-right: 1rem;
+    margin-bottom: 100px;
+}
+
+.sidenav-container .closebtn:hover{
+    text-decoration: none;
+}
+
+.sidenav-container .drawer-close-button{
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 3rem;
+}
