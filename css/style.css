@@ -1,15 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
-body {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 90px;
-    max-width: 100%;
-}
-
 /*
 Flexbox styling
 */
-
 .container-col {
     display: flex;
     flex-direction: column;
@@ -28,158 +21,288 @@ Flexbox styling
     flex-grow: 2;
 }
 
-/*
-Header styling
-*/
-.header {
-    border-bottom: 3px black solid;
+.item4 {
+    flex-grow: 4;
 }
 
-.logoHeaderSP > img{
-    height: 500px;
-    margin-left: 150px;
-}
-
-
-/*
-Footer Styling
-*/
-.footer {
-    border-top: 3px black solid;
-    bottom: 0;
-    height: 300px;
-    background-color: ghostwhite;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
-
-/*
-Content Styling
-*/
-.contentWrapper {
-    margin-top: 10px;
-    padding: 10px;
-}
-
-.imageWrapper {
-    padding: 50px 10px 10px 10px;
+.flexCenter {
     justify-content: center;
 }
 
-.imageWrapperEntrance {
-    max-width: 1rem;
+
+/* MOBILE */
+@media (max-width: 1000px) {
+    body {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 90px;
+        max-width: 100%;
+    }
+
+    /*
+    Header styling
+    */
+    .header {
+        border-bottom: 3px black solid;
+    }
+
+    .logoHeaderSP > img {
+        height: 500px;
+        margin-left: 150px;
+    }
+
+
+    /*
+    Footer Styling
+    */
+    .footer {
+        border-top: 3px black solid;
+        bottom: 0;
+        height: 300px;
+        background-color: ghostwhite;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+
+    /*
+    Content Styling
+    */
+    .contentWrapper {
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    .imageWrapper {
+        padding: 50px 10px 10px 10px;
+        justify-content: center;
+    }
+
+    .imageWrapperEntrance {
+        max-width: 1rem;
+    }
+
+    .textContent {
+        font-size: 24pt;
+    }
+
+    .textTitle6 {
+        font-size: 36pt;
+        font-weight: bold;
+    }
+
+    .textIntro {
+        font-size: 28pt;
+        font-weight: bold;
+    }
+
+    .instructorCard {
+        font-size: 24pt;
+    }
+
+    .portrait {
+        height: 400px;
+        width: 100%;
+        background-color: grey;
+    }
+
+    .tmpImage {
+        width: 100%;
+        height: 400px;
+        background-color: grey;
+    }
+
+    /*
+    Mobile Drawer nav styling
+    */
+    .navLogo > img {
+        height: 500px;
+        margin-top: -150px
+    }
+
+    .navLink {
+        font-size: 75px;
+    }
+
+    nav {
+        height: 10vh;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: white;
+        z-index: 1;
+    }
+
+    .mobile-nav-open-icon {
+        font-size: 100px;
+        cursor: pointer;
+        margin-right: 2rem;
+        color: black;
+        margin-left: 3rem;
+    }
+
+    .sidenav-container {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 3;
+        top: 0;
+        left: 0;
+        background-color: white;
+        border-right: 1px solid black;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidenav-container a {
+        text-decoration: none;
+        color: black;
+        display: block;
+        transition: 0.3s;
+        margin: 10px 0;
+    }
+
+    .sidenav-container a:hover {
+        text-decoration: black underline;
+    }
+
+    .sidenav-container .closebtn {
+        font-size: 250px;
+        color: black;
+        padding-right: 1rem;
+        margin-bottom: 100px;
+    }
+
+    .sidenav-container .closebtn:hover {
+        text-decoration: none;
+    }
+
+    .sidenav-container .drawer-close-button {
+        height: 300px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-bottom: 3rem;
+    }
+
+    .desktopRoot {
+        display: none;
+    }
 }
 
-.textContent {
-    font-size: 24pt;
-}
 
-.textTitle6 {
-    font-size: 36pt;
-    font-weight: bold;
-}
+/* DESKTOP */
+@media (min-width: 1000px) {
 
-.textIntro {
-    font-size: 28pt;
-    font-weight: bold;
-}
+    body {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 24px;
+        max-width: 100%;
+    }
 
-.instructorCard {
-    font-size: 24pt;
-}
+    .mobileRoot{
+        display: none;
+    }
 
-.portrait {
-    height: 400px;
-    width: 100%;
-    background-color: grey;
-}
+    .desktopRoot{
+        display: inline;
+        flex-direction: column;
+        width: 1rem;
+    }
 
-.tmpImage {
-    width: 100%;
-    height: 400px;
-    background-color: grey;
-}
+    .contentWrapper {
+        justify-content: space-between;
+    }
 
-/*
-Mobile Drawer nav styling
-*/
+    .contentContainer {
+        -webkit-box-shadow: 0 10px 10px -1px #777;
+        -moz-box-shadow: 0 10px 10px -1px #777;
+        box-shadow: 0 10px 10px -1px #777;
+        padding: 10px;
+    }
 
-.navLogo > img {
-    height: 500px;
-    margin-top: -150px
-}
+    .link{
+        position: relative;
+        color: #000;
+        text-decoration: none;
+    }
 
-.navLink{
-    font-size: 75px;
-}
+    .link:hover {
+        color: #000
+    }
 
-nav{
-    height: 10vh;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: white;
-    z-index: 1;
-}
+    .link:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #000;
+        visibility: hidden;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transition: all 0.2s ease-in-out 0s;
+        transition: all 0.2s ease-in-out 0s;
+    }
 
-.mobile-nav-open-icon{
-    font-size: 100px;
-    cursor: pointer;
-    margin-right: 2rem;
-    color: black;
-    margin-left:3rem;
-}
+    .link:hover:before {
+        visibility: visible;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
 
-.sidenav-container {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 3;
-    top: 0;
-    left: 0;
-    background-color: white;
-    border-right: 1px solid black;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    .logoNav {
+        width: 50px;
+    }
 
-.sidenav-container a {
-    text-decoration: none;
-    color: black;
-    display: block;
-    transition: 0.3s;
-    margin: 10px 0;
-}
+    nav {
+        width: 100%;
+        padding-top: 10px;
+        margin-bottom: 20px;
+    }
 
-.sidenav-container a:hover {
-    text-decoration: black underline;
-}
+    nav>div {
+        margin-top: 10px;
+    }
+    nav>.logo {
+        margin-top: 0px;
+    }
 
-.sidenav-container .closebtn {
-    font-size: 250px;
-    color: black ;
-    padding-right: 1rem;
-    margin-bottom: 100px;
-}
+    .sidebarContact {
+        font-size: 16px;
+        /*width: 10%;*/
 
-.sidenav-container .closebtn:hover{
-    text-decoration: none;
-}
+        -webkit-box-shadow: 0 10px 10px -1px #777;
+        -moz-box-shadow: 0 10px 10px -1px #777;
+        box-shadow: 0 10px 10px -1px #777;
+        padding: 10px;
+    }
 
-.sidenav-container .drawer-close-button{
-    height: 300px;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-bottom: 3rem;
+    .sidebarEvents {
+        font-size: 16px;
+        /*width: 40%;*/
+
+        -webkit-box-shadow: 0 10px 10px -1px #777;
+        -moz-box-shadow: 0 10px 10px -1px #777;
+        box-shadow: 0 10px 10px -1px #777;
+        padding: 10px;
+    }
+
+    .sidebarH3 {
+        font-size: 20px;
+    }
+
+    .sidebarH4 {
+        font-size: 18px;
+    }
+
 }
